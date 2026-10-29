@@ -10,7 +10,7 @@ if (Test-Path $out) { Remove-Item $out -Force }
 # Anchored member list -> no "./" entries, stable layout.
 Push-Location $root
 try {
-    tar -a -cf $out pack.mcmeta assets
+    tar -a -cf $out pack.mcmeta pack.png assets
     if ($LASTEXITCODE -ne 0) { throw "tar failed with exit code $LASTEXITCODE" }
 } finally {
     Pop-Location
