@@ -1,5 +1,8 @@
 # EnchantEnhanced
 
+Fork of [blob's Enchant Icons](https://modrinth.com/resourcepack/blobs-enchant-icons),
+licensed under [GPL-2.0-only](LICENSE).
+
 Resource pack that renders enchantment icons and colored names with Roman → Arabic level labels:
 
 | Level | Display |
@@ -21,11 +24,18 @@ Enchantment names use grade colors: red for curses, gray for bad, white for basi
 | 26–100 | Yellow |
 | 101–255 | Red |
 
+## Differences from upstream
+
+- Custom Unbreaking icon and a new Lunge icon.
+- Enchantment names use grade colors, and level suffixes use a separate color scale.
+- Levels 2–25 use Roman numerals; levels 26–255 use Arabic numerals.
+- Updated pack compatibility for Minecraft 26.2+.
+
 ## Icons and licensing
 
 Icons are based on [blob's Enchant Icons](https://modrinth.com/resourcepack/blobs-enchant-icons)
-(licensed GPL-2.0-only; see `LICENSE`). The Unbreaking icon is replaced with an
-original design. Icons are packed as a bitmap font per `assets/minecraft/font/default.json`
+(licensed GPL-2.0-only; see `LICENSE`). The Unbreaking and Lunge icons use
+custom designs. Icons are packed as a bitmap font per `assets/minecraft/font/default.json`
 and referenced by private-use glyphs in the name translations.
 
 ## How it works
@@ -70,6 +80,9 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 ```
 
 Output: `EnchantEnhanced.zip` (built with `tar`/bsdtar, bundled with Windows 10+).
+If `Y:\Games\NRC Instances\profiles\Leben_s NVIDIA Pack\resourcepacks` exists,
+the build also copies the ZIP there, replacing the previous copy. Otherwise it
+warns and leaves the local build available for manual installation.
 
 ## Files
 

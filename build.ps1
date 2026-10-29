@@ -17,3 +17,12 @@ try {
 }
 
 Write-Host "Built $out"
+
+$resourcePacks = 'Y:\Games\NRC Instances\profiles\Leben_s NVIDIA Pack\resourcepacks'
+if (Test-Path -LiteralPath $resourcePacks -PathType Container) {
+    $installed = Join-Path $resourcePacks 'EnchantEnhanced.zip'
+    Copy-Item -LiteralPath $out -Destination $installed -Force
+    Write-Host "Installed $installed"
+} else {
+    Write-Warning "Resource pack directory not found: $resourcePacks"
+}
