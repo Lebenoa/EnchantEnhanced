@@ -1,9 +1,11 @@
 # EnchantEnhanced
 
+<img src="pack.png" alt="EnchantEnhanced pack icon" width="128">
+
 Fork of [blob's Enchant Icons](https://modrinth.com/resourcepack/blobs-enchant-icons),
 licensed under [GPL-2.0-only](LICENSE).
 
-Resource pack that renders enchantment icons and colored names with Roman → Arabic level labels:
+Enchantment icons and colored names, with Roman and Arabic level labels.
 
 | Level | Display |
 |---|---|
@@ -26,10 +28,10 @@ Enchantment names use grade colors: red for curses, gray for bad, white for basi
 
 ## Differences from upstream
 
-- Custom Unbreaking icon and a new Lunge icon.
-- Enchantment names use grade colors, and level suffixes use a separate color scale.
-- Levels 2–25 use Roman numerals; levels 26–255 use Arabic numerals.
-- Updated pack compatibility for Minecraft 26.2+.
+- Custom <img src="assets/minecraft/textures/misc/unbreaking.png" alt="" width="32" height="32"> **Unbreaking** icon and new <img src="assets/minecraft/textures/misc/lunge.png" alt="" width="32" height="32"> **Lunge** icon.
+- **Grade colors** for enchantment names and a separate color scale for level suffixes.
+- **Roman numerals** for levels 2–25 and **Arabic numerals** for levels 26–255.
+- Updated compatibility for **Minecraft 26.2+**.
 
 ## Icons and licensing
 
@@ -75,7 +77,7 @@ Copy the built ZIP into the instance's `resourcepacks/` folder and enable it in
 Prerelease artifact: run the build script to produce a distributable zip that
 matches the release layout (no leading `./` entries, exact member paths):
 
-```
+```powershell
 powershell -ExecutionPolicy Bypass -File build.ps1
 ```
 
@@ -86,8 +88,9 @@ warns and leaves the local build available for manual installation.
 
 ## Files
 
-```
+```text
 pack.mcmeta                       pack metadata & description
+pack.png                          resource pack icon
 assets/minecraft/lang/en_us.json  name, level, and potency translations
 assets/minecraft/font/default.json  bitmap icon font providers
 assets/minecraft/textures/misc/  icon textures
